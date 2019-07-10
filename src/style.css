@@ -1,0 +1,98 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "gold-bar1" "banner" "gold-bar2";
+}
+
+.header {
+  grid-column: header;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-column-gap: 35%;
+  background-color: black;
+  min-height: 7vh;
+  grid-template-areas: "logo  nav";
+}
+.header .logo {
+  grid-row: logo;
+  vertical-align: middle;
+  height: 5vh;
+  margin-top: 1vh;
+  margin-left: 5px;
+}
+.header .nav {
+  grid-row: nav;
+  height: 100%;
+  max-width: 45vw;
+  float: right;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "nav-ul";
+}
+.header ul {
+  grid-area: nav-ul;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  float: right;
+  margin-right: 1em;
+}
+.header ul li {
+  list-style-type: none;
+  padding-right: 1em;
+  width: auto;
+  font: 100% Mina, sans-serif;
+  font-size: 2vw;
+  line-height: 7vh;
+  color: #d3be6d;
+  white-space: nowrap;
+}
+.header ul li:hover {
+  cursor: pointer;
+  color: #ecc529;
+}
+
+.gold-bar1 {
+  grid-area: gold-bar1;
+  height: 1vh;
+  background-color: #ecc529;
+}
+
+.gold-bar2 {
+  grid-area: gold-bar2;
+  height: 1vh;
+  background-color: #ecc529;
+}
+
+.banner {
+  grid-area: banner;
+  background-image: url("../img/bg.jpg");
+  background-color: #000;
+  height: 91vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner .logo-big {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 30vw;
+}
+
+/*# sourceMappingURL=style.css.map */
